@@ -3,56 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>简单互动网页</title>
+  <title>大学专业介绍</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #333;
-      text-align: center;
-    }
-    button {
-      display: block;
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h1 { text-align: center; color: #333; }
+    .major {
+      background: white;
       margin: 15px auto;
-      padding: 12px 24px;
-      font-size: 18px;
-      border: none;
-      border-radius: 6px;
-      background-color: #4caf50;
-      color: white;
-      cursor: pointer;
-      max-width: 90%;
-      width: 300px;
+      padding: 15px 20px;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
     }
-    button:active {
-      background-color: #388e3c;
-    }
-    #message {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 20px;
-      color: #555;
-      min-height: 40px;
-    }
+    .major h2 { color: #4caf50; }
+    .major p { color: #555; line-height: 1.6; }
   </style>
 </head>
 <body>
 
-  <h1>欢迎访问互动网页</h1>
-  <button onclick="showMessage('你好！欢迎使用手机访问网页！')">点击这里显示问候</button>
-  <button onclick="showMessage('这是一个简单的互动示例。')">点击这里显示提示</button>
+  <h1>大学专业介绍</h1>
 
-  <div id="message"></div>
+  <div class="major">
+    <h2>计算机科学与技术</h2>
+    <p>学习计算机软硬件基础，编程，算法，系统设计。毕业后可从事软件开发、系统维护、数据分析等工作。</p>
+  </div>
 
-  <script>
-    function showMessage(text) {
-      document.getElementById('message').innerText = text;
-    }
-  </script>
+  <div class="major">
+    <h2>电子信息工程</h2>
+    <p>涵盖电子电路、通信原理、信号处理，毕业生适合通信设备、电子设计、嵌入式开发领域工作。</p>
+  </div>
+
+  <div class="major">
+    <h2>工商管理</h2>
+    <p>学习市场营销、财务管理、人力资源管理，毕业后可进入企业管理、咨询、市场策划等岗位。</p>
+  </div>
+
+  <!-- 你可以继续添加更多专业介绍 -->
 
 </body>
 </html>
