@@ -5,40 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>大学专业介绍</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
-    h1 { text-align: center; color: #333; }
-    .major {
-      background: white;
-      margin: 15px auto;
-      padding: 15px 20px;
+    body {
+      font-family: Arial, sans-serif;
       max-width: 600px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      margin: 20px auto;
+      padding: 0 10px;
+      background: #f9f9f9;
+      color: #333;
     }
-    .major h2 { color: #4caf50; }
-    .major p { color: #555; line-height: 1.6; }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    .major-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .major-list li {
+      background: white;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    .major-list li:hover {
+      background: #e8f5e9;
+    }
+    .major-detail {
+      background: white;
+      margin: 10px 0 20px 0;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: none;
+    }
+    .major-detail.active {
+      display: block;
+    }
+    .major-detail h2 {
+      color: #388E3C;
+    }
+    .major-detail section {
+      margin-bottom: 12px;
+    }
+    .close-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #f44336;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-
   <h1>大学专业介绍</h1>
+  <ul class="major-list">
+    <li data-major="cs">计算机科学与技术</li>
+    <li data-major="ee">电子信息工程</li>
+    <li data-major="biz">工商管理</li>
+    <!-- 可以添加更多专业 -->
+  </ul>
 
-  <div class="major">
+  <div id="major-detail-cs" class="major-detail">
     <h2>计算机科学与技术</h2>
-    <p>学习计算机软硬件基础，编程，算法，系统设计。毕业后可从事软件开发、系统维护、数据分析等工作。</p>
+    <section><strong>基本信息：</strong>学习计算机软硬件基础，算法，编程，系统设计等。</section>
+    <section><strong>所学课程：</strong>数据结构，操作系统，计算机网络，数据库等。</section>
+    <section><strong>就业方向：</strong>软件开发，系统维护，数据分析，人工智能等。</section>
+    <button class="close-btn" onclick="closeDetail()">关闭</button>
   </div>
 
-  <div class="major">
+  <div id="major-detail-ee" class="major-detail">
     <h2>电子信息工程</h2>
-    <p>涵盖电子电路、通信原理、信号处理，毕业生适合通信设备、电子设计、嵌入式开发领域工作。</p>
+    <section><strong>基本信息：</strong>涵盖电子电路、通信原理、信号处理等。</section>
+    <section><strong>所学课程：</strong>模拟电子技术、数字电路、通信原理、嵌入式系统等。</section>
+    <section><strong>就业方向：</strong>通信设备设计、电子产品研发、嵌入式开发等。</section>
+    <button class="close-btn" onclick="closeDetail()">关闭</button>
   </div>
 
-  <div class="major">
+  <div id="major-detail-biz" class="major-detail">
     <h2>工商管理</h2>
-    <p>学习市场营销、财务管理、人力资源管理，毕业后可进入企业管理、咨询、市场策划等岗位。</p>
+    <section><strong>基本信息：</strong>学习市场营销、财务管理、人力资源管理等。</section>
+    <section><strong>所学课程：</strong>市场营销学、财务管理、组织行为学、战略管理等。</section>
+    <section><strong>就业方向：</strong>企业管理、市场策划、咨询、人力资源等。</section>
+    <button class="close-btn" onclick="closeDetail()">关闭</button>
   </div>
 
-  <!-- 你可以继续添加更多专业介绍 -->
+  <script>
+    const majorList = document.querySelectorAll('.major-list li');
+    const details = document.querySelectorAll('.major-detail');
 
+    majorList.forEach(item => {
+      item.addEventListener('click', () => {
+        // 先隐藏所有详情
+        details.forEach(d => d.classList.remove('active'));
+        // 显示对应专业详情
+        const majorId = 'major-detail-' + item.dataset.major;
+        document.getElementById(majorId).classList.add('active');
+        // 滚动到详情区域
+        document.getElementById(majorId).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    function closeDetail() {
+      details.forEach(d => d.classList.remove('active'));
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
