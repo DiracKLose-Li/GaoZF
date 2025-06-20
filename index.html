@@ -1,189 +1,152 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>大学专业介绍</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 0 15px;
-    background: #f9f9f9;
-    color: #333;
-  }
-  h1 {
-    text-align: center;
-    color: #4CAF50;
-    margin-bottom: 20px;
-  }
-  .major-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .major-list li {
-    background: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: background 0.3s;
-  }
-  .major-list li:hover {
-    background: #e8f5e9;
-  }
-  .major-detail {
-    background: white;
-    margin: 15px 0 30px 0;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    display: none;
-  }
-  .major-detail.active {
-    display: block;
-  }
-  .major-detail h2 {
-    color: #388E3C;
-    margin-bottom: 10px;
-  }
-  .major-detail section {
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  .close-btn {
-    display: inline-block;
-    margin-top: 10px;
-    background: #f44336;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大学专业导航</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+    .sidebar h2 {
+      margin-top: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+    .sidebar li:hover {
+      text-decoration: underline;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      background: #f5f5f5;
+      overflow-y: auto;
+    }
+    .major {
+      display: none;
+    }
+    .major.active {
+      display: block;
+    }
+    img.major-img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+    .demo-box {
+      margin-top: 20px;
+      padding: 10px;
+      background: white;
+      border-left: 4px solid #4caf50;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>大学专业介绍</h1>
-  <ul class="major-list">
-    <li data-major="cs">计算机科学与技术</li>
-    <li data-major="ee">电子信息工程</li>
-    <li data-major="biz">工商管理</li>
-    <li data-major="mech">机械工程</li>
-    <li data-major="chem">化学工程与工艺</li>
-    <li data-major="bio">生物科学</li>
-    <li data-major="env">环境科学与工程</li>
-    <li data-major="math">数学与应用数学</li>
-    <li data-major="psy">心理学</li>
-    <li data-major="law">法学</li>
-    <li data-major="econ">经济学</li>
-    <li data-major="arch">建筑学</li>
-  </ul>
-
-  <div id="major-detail-cs" class="major-detail">
-    <h2>计算机科学与技术</h2>
-    <section><strong>基本信息：</strong>计算机科学与技术专业培养具备计算机软硬件系统设计、开发与应用能力的复合型人才，掌握计算机原理、算法与程序设计等核心知识。</section>
-    <section><strong>主要课程：</strong>数据结构、操作系统、计算机网络、数据库原理、编译原理、人工智能、软件工程、网络安全。</section>
-    <section><strong>就业方向：</strong>软件开发工程师、系统架构师、数据分析师、人工智能工程师、网络安全专家、IT项目管理等。</section>
+  <div class="sidebar">
+    <h2>专业列表</h2>
+    <ul>
+      <li onclick="showMajor('cs')">计算机科学</li>
+      <li onclick="showMajor('math')">数学与应用数学</li>
+      <li onclick="showMajor('law')">法学</li>
+    </ul>
   </div>
+  <div class="content">
+    <div id="cs" class="major active">
+      <h2>计算机科学与技术</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Computer-science-and-engineering.jpg/640px-Computer-science-and-engineering.jpg" class="major-img" alt="计算机图示">
+      <p><strong>简介：</strong>本专业学习计算机原理、编程技术、软件工程与人工智能，旨在培养具备系统开发和技术创新能力的专业人才。</p>
+      <p><strong>核心课程：</strong>数据结构、操作系统、网络、数据库、算法设计、人工智能、前端与后端开发。</p>
+      <p><strong>就业方向：</strong>软件开发工程师、AI算法工程师、数据分析师、网络安全专家、产品经理等。</p>
+      <div class="demo-box">
+        <strong>🎮 小工具示例：</strong>
+        <p>你知道冒泡排序是怎么工作的吗？点击按钮，查看一次排序：</p>
+        <button onclick="runBubbleSort()">运行冒泡排序</button>
+        <pre id="bubble-output"></pre>
+      </div>
+    </div>
 
-  <div id="major-detail-ee" class="major-detail">
-    <h2>电子信息工程</h2>
-    <section><strong>基本信息：</strong>本专业以电子技术、信息处理和通信技术为核心，培养能从事电子产品设计、信息系统开发与维护的工程技术人才。</section>
-    <section><strong>主要课程：</strong>模拟电子技术、数字电路、信号与系统、通信原理、微处理器技术、嵌入式系统、光纤通信。</section>
-    <section><strong>就业方向：</strong>通信设备研发、嵌入式系统开发、电子设计制造、信息系统维护、网络工程等。</section>
-  </div>
+    <div id="math" class="major">
+      <h2>数学与应用数学</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Mathematics_concept.jpg/640px-Mathematics_concept.jpg" class="major-img" alt="数学图示">
+      <p><strong>简介：</strong>本专业注重数学理论、建模与分析能力的培养，广泛应用于金融、科技、数据分析等多个领域。</p>
+      <p><strong>核心课程：</strong>高等数学、线性代数、概率统计、微分方程、数学建模、数值分析。</p>
+      <p><strong>就业方向：</strong>科研、教育、银行、保险、互联网数据分析、算法研发等。</p>
+      <div class="demo-box">
+        <strong>📐 小测试：</strong>
+        <p>2的 5 次方等于多少？</p>
+        <input id="powerInput" type="text" placeholder="请输入答案" />
+        <button onclick="checkPower()">提交</button>
+        <div id="power-result"></div>
+      </div>
+    </div>
 
-  <div id="major-detail-biz" class="major-detail">
-    <h2>工商管理</h2>
-    <section><strong>基本信息：</strong>工商管理专业培养具备企业管理、市场营销、人力资源管理等知识的应用型人才，注重管理能力和实践技能。</section>
-    <section><strong>主要课程：</strong>市场营销学、财务管理、组织行为学、人力资源管理、战略管理、运营管理。</section>
-    <section><strong>就业方向：</strong>企业管理、市场策划、品牌管理、咨询服务、人力资源管理等。</section>
-  </div>
-
-  <div id="major-detail-mech" class="major-detail">
-    <h2>机械工程</h2>
-    <section><strong>基本信息：</strong>机械工程专业侧重机械设计制造与自动化，培养能设计、制造及维护机械设备的工程技术人才。</section>
-    <section><strong>主要课程：</strong>机械设计基础、机械制造技术、材料力学、液压与气动传动、自动控制原理、机电一体化。</section>
-    <section><strong>就业方向：</strong>机械设计工程师、制造工程师、设备维护工程师、自动化工程师、产品研发等。</section>
-  </div>
-
-  <div id="major-detail-chem" class="major-detail">
-    <h2>化学工程与工艺</h2>
-    <section><strong>基本信息：</strong>培养掌握化学反应工程、化工过程及设备设计的专业人才，能够从事化工产品生产与研发工作。</section>
-    <section><strong>主要课程：</strong>无机化学、有机化学、化工原理、化学反应工程、分离工程、过程控制。</section>
-    <section><strong>就业方向：</strong>化工厂工艺工程师、产品研发、质量控制、安全环保管理等。</section>
-  </div>
-
-  <div id="major-detail-bio" class="major-detail">
-    <h2>生物科学</h2>
-    <section><strong>基本信息：</strong>生物科学专业致力于生命科学基础理论与实验技能的培养，涵盖分子生物学、遗传学、生态学等领域。</section>
-    <section><strong>主要课程：</strong>细胞生物学、遗传学、微生物学、生物化学、生态学、分子生物学实验。</section>
-    <section><strong>就业方向：</strong>科研机构、生物制药、环境保护、农业技术、医疗健康等领域。</section>
-  </div>
-
-  <div id="major-detail-env" class="major-detail">
-    <h2>环境科学与工程</h2>
-    <section><strong>基本信息：</strong>培养具备环境保护与治理能力的专业人才，研究环境污染控制、资源利用与可持续发展。</section>
-    <section><strong>主要课程：</strong>环境化学、环境工程原理、水污染控制、大气污染防治、固废处理技术。</section>
-    <section><strong>就业方向：</strong>环保工程师、环境监测员、资源管理、政策制定与咨询。</section>
-  </div>
-
-  <div id="major-detail-math" class="major-detail">
-    <h2>数学与应用数学</h2>
-    <section><strong>基本信息：</strong>培养具备扎实数学理论基础与应用能力，能在科研、教学、金融及工程技术领域工作的专业人才。</section>
-    <section><strong>主要课程：</strong>高等数学、线性代数、概率论与数理统计、数学分析、数学建模、数值分析。</section>
-    <section><strong>就业方向：</strong>科研机构、教育、金融分析、数据科学、软件开发、统计咨询。</section>
-  </div>
-
-  <div id="major-detail-psy" class="major-detail">
-    <h2>心理学</h2>
-    <section><strong>基本信息：</strong>心理学专业研究人的行为与心理过程，培养具备心理咨询、心理测评及研究能力的专业人才。</section>
-    <section><strong>主要课程：</strong>普通心理学、发展心理学、社会心理学、心理测量、心理咨询技术。</section>
-    <section><strong>就业方向：</strong>心理咨询师、教育培训、市场调研、人力资源管理、社会服务。</section>
-  </div>
-
-  <div id="major-detail-law" class="major-detail">
-    <h2>法学</h2>
-    <section><strong>基本信息：</strong>法学专业培养具有法律基础知识和实务操作能力的人才，涉及民法、刑法、经济法等领域。</section>
-    <section><strong>主要课程：</strong>宪法学、民法学、刑法学、行政法学、经济法学、国际法。</section>
-    <section><strong>就业方向：</strong>律师、法官、检察官、企业法务、法律顾问、政府机关。</section>
-  </div>
-
-  <div id="major-detail-econ" class="major-detail">
-    <h2>经济学</h2>
-    <section><strong>基本信息：</strong>经济学专业研究资源配置和经济运行规律，培养能分析经济问题和制定政策的专业人才。</section>
-    <section><strong>主要课程：</strong>微观经济学、宏观经济学、计量经济学、国际贸易、发展经济学。</section>
-    <section><strong>就业方向：</strong>金融机构、政府部门、咨询公司、科研机构、企业管理。</section>
-  </div>
-
-  <div id="major-detail-arch" class="major-detail">
-    <h2>建筑学</h2>
-    <section><strong>基本信息：</strong>建筑学专业培养具备建筑设计、规划与施工管理能力的人才，关注功能、美学与环境融合。</section>
-    <section><strong>主要课程：</strong>建筑设计原理、建筑结构、建筑材料、城市规划、建筑历史与理论。</section>
-    <section><strong>就业方向：</strong>建筑设计师、规划师、施工管理、房地产开发、景观设计。</section>
+    <div id="law" class="major">
+      <h2>法学</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Scales_of_Justice_%28Symbol%29.svg/640px-Scales_of_Justice_%28Symbol%29.svg.png" class="major-img" alt="法律图示">
+      <p><strong>简介：</strong>法学是一门研究法律体系和社会规范的学科，注重理论基础与实际应用相结合。</p>
+      <p><strong>核心课程：</strong>宪法学、民法、刑法、行政法、经济法、国际法。</p>
+      <p><strong>就业方向：</strong>律师、法官、检察官、企业法务、公务员等。</p>
+    </div>
   </div>
 
   <script>
-    const majorList = document.querySelectorAll('.major-list li');
-    const details = document.querySelectorAll('.major-detail');
-
-    majorList.forEach(item => {
-      item.addEventListener('click', () => {
-        details.forEach(d => d.classList.remove('active'));
-        const majorId = 'major-detail-' + item.dataset.major;
-        document.getElementById(majorId).classList.add('active');
-        document.getElementById(majorId).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    function closeDetail() {
-      details.forEach(d => d.classList.remove('active'));
+    function showMajor(id) {
+      document.querySelectorAll('.major').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function runBubbleSort() {
+      let arr = [5, 3, 8, 2, 4];
+      let log = '';
+      for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - 1 - i; j++) {
+          if (arr[j] > arr[j + 1]) {
+            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+          }
+        }
+        log += `第 ${i + 1} 轮: [${arr.join(', ')}]\n`;
+      }
+      document.getElementById('bubble-output').textContent = log;
+    }
+
+    function checkPower() {
+      const val = document.getElementById('powerInput').value;
+      const result = document.getElementById('power-result');
+      if (parseInt(val) === 32) {
+        result.textContent = "✅ 正确！2 的 5 次方是 32。";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ 错误，再试试！";
+        result.style.color = "red";
+      }
     }
   </script>
 </body>
