@@ -82,19 +82,19 @@
       <li><strong>【工科】</strong></li>
       <li onclick="showMajor('cs')">计算机科学</li>
       <li onclick="showMajor('ee')">电子信息工程</li>
-      <li onclick="showMajor('eelec')">电气工程及其自动化</li>
       <li onclick="showMajor('mech')">机械工程</li>
       <li onclick="showMajor('chem')">化学工程</li>
       <li onclick="showMajor('env')">环境工程</li>
       <li onclick="showMajor('auto')">自动化</li>
       <li onclick="showMajor('arch')">建筑学</li>
+      <li onclick="showMajor('elec')">电气工程及其自动化</li>
       <li onclick="showMajor('bioeng')">生物工程</li>
 
       <li><strong>【理科】</strong></li>
       <li onclick="showMajor('math')">数学与应用数学</li>
-      <li onclick="showMajor('physics')">物理学</li>
       <li onclick="showMajor('bio')">生物科学</li>
       <li onclick="showMajor('geo')">地理信息科学</li>
+      <li onclick="showMajor('phys')">物理学</li>
 
       <li><strong>【商管】</strong></li>
       <li onclick="showMajor('biz')">工商管理</li>
@@ -119,7 +119,7 @@
   <div class="content">
     <div id="cs" class="major active">
       <h2>计算机科学与技术</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Computer-science-and-engineering.jpg/640px-Computer-science-and-engineering.jpg" class="major-img" alt="计算机图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/computer_science.jpg" class="major-img" alt="计算机图示" />
       <p><strong>简介：</strong>本专业学习计算机原理、编程技术、软件工程与人工智能，旨在培养具备系统开发和技术创新能力的专业人才。</p>
       <p><strong>核心课程：</strong>数据结构、操作系统、网络、数据库、算法设计、人工智能、前端与后端开发。</p>
       <p><strong>就业方向：</strong>软件开发工程师、AI算法工程师、数据分析师、网络安全专家、产品经理等。</p>
@@ -131,105 +131,41 @@
       </div>
     </div>
 
-    <div id="ee" class="major">
-      <h2>电子信息工程</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Printed_circuit_board.jpg/640px-Printed_circuit_board.jpg" class="major-img" alt="电子图示" />
-      <p><strong>简介：</strong>学习电路设计、信号处理、通信与嵌入式系统，广泛应用于信息技术与制造业。</p>
-      <p><strong>核心课程：</strong>模拟电路、数字电路、通信原理、信号与系统、嵌入式开发。</p>
-      <p><strong>就业方向：</strong>电子工程师、嵌入式系统开发、通信工程、半导体行业。</p>
-    </div>
-
-    <div id="eelec" class="major">
-      <h2>电气工程及其自动化</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Electrical_substation_urban_area.jpg/640px-Electrical_substation_urban_area.jpg" class="major-img" alt="电气工程图示" />
-      <p><strong>简介：</strong>研究电力系统、自动控制与电气设备，培养电力电子与自动化技术人才。</p>
-      <p><strong>核心课程：</strong>电路原理、自动控制原理、电力系统分析、继电保护、电机学。</p>
-      <p><strong>就业方向：</strong>电力公司、自动化企业、设备维护、系统设计与研发。</p>
-    </div>
-
-    <div id="mech" class="major">
-      <h2>机械工程</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Mechanical_engineering.jpg/640px-Mechanical_engineering.jpg" class="major-img" alt="机械图示" />
-      <p><strong>简介：</strong>涉及机械设计、制造、自动控制与机器人等方向，应用于工业各领域。</p>
-      <p><strong>核心课程：</strong>机械设计、材料力学、机械制造、工程制图、控制工程。</p>
-      <p><strong>就业方向：</strong>机械设计师、设备工程师、自动化工程、制造业研发。</p>
-    </div>
-
-    <div id="chem" class="major">
-      <h2>化学工程与工艺</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Industrial_chemistry.jpg/640px-Industrial_chemistry.jpg" class="major-img" alt="化工图示" />
-      <p><strong>简介：</strong>结合化学与工程，研究化工过程、反应工程、分离技术等，用于能源、医药、材料等产业。</p>
-      <p><strong>核心课程：</strong>无机化学、有机化学、物理化学、化工原理、反应工程、分离过程。</p>
-      <p><strong>就业方向：</strong>精细化工、能源化工、制药、食品、生物工程等行业。</p>
-    </div>
-
-    <div id="env" class="major">
-      <h2>环境工程</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Wastewater_plant.jpg/640px-Wastewater_plant.jpg" class="major-img" alt="环境图示" />
-      <p><strong>简介：</strong>研究污染控制、水处理、大气治理与生态保护，为可持续发展提供技术支持。</p>
-      <p><strong>核心课程：</strong>环境化学、水处理工程、大气污染控制、固废处理、生态学基础。</p>
-      <p><strong>就业方向：</strong>环保设计、水务公司、监测机构、政府环保部门等。</p>
-    </div>
-
-    <div id="auto" class="major">
-      <h2>自动化</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Industrial_robot.jpg/640px-Industrial_robot.jpg" class="major-img" alt="自动化图示" />
-      <p><strong>简介：</strong>融合控制理论、电子技术与计算机技术，实现工业过程与设备的自动控制。</p>
-      <p><strong>核心课程：</strong>控制工程基础、传感器技术、电机与拖动、PLC与嵌入式系统。</p>
-      <p><strong>就业方向：</strong>自动化工程师、系统集成、工业控制、机器人开发等。</p>
-    </div>
-
-    <div id="arch" class="major">
-      <h2>建筑学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Building_design.jpg/640px-Building_design.jpg" class="major-img" alt="建筑图示" />
-      <p><strong>简介：</strong>融合艺术与工程，关注建筑设计、城市规划与空间环境的创造。</p>
-      <p><strong>核心课程：</strong>建筑设计、建筑结构、建筑史、城市规划、建筑材料与施工技术。</p>
-      <p><strong>就业方向：</strong>建筑设计师、城市规划师、景观设计、施工项目管理。</p>
-    </div>
-
-    <div id="bioeng" class="major">
-      <h2>生物工程</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Biotechnology_Lab.jpg/640px-Biotechnology_Lab.jpg" class="major-img" alt="生物工程图示" />
-      <p><strong>简介：</strong>融合生物学与工程技术，开发生物制品和生物工艺，应用于医疗、环保与农业。</p>
-      <p><strong>核心课程：</strong>分子生物学、细胞工程、生物化学、发酵工程、基因工程。</p>
-      <p><strong>就业方向：</strong>医药制造、生物制品开发、环境保护、生物技术研发。</p>
-    </div>
-
     <div id="math" class="major">
       <h2>数学与应用数学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Mathematics_collage.png/640px-Mathematics_collage.png" class="major-img" alt="数学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/mathematics.jpg" class="major-img" alt="数学图示" />
       <p><strong>简介：</strong>研究数量、结构、空间与变化的科学，强调逻辑思维与建模能力。</p>
       <p><strong>核心课程：</strong>高等数学、线性代数、概率论与数理统计、常微分方程、实变函数、复分析。</p>
       <p><strong>就业方向：</strong>数据分析师、金融建模、科研、教育、算法工程师等。</p>
     </div>
 
-    <div id="physics" class="major">
-      <h2>物理学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Physics_equipment.jpg/640px-Physics_equipment.jpg" class="major-img" alt="物理学图示" />
-      <p><strong>简介：</strong>研究物质的基本性质及自然规律，培养理论分析和实验能力。</p>
-      <p><strong>核心课程：</strong>经典力学、电磁学、热力学与统计物理、量子力学、固体物理。</p>
-      <p><strong>就业方向：</strong>科研机构、教育、高新技术研发、工程技术支持。</p>
+    <div id="law" class="major">
+      <h2>法学</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/law.jpg" class="major-img" alt="法学图示" />
+      <p><strong>简介：</strong>研究法律制度、法治体系与社会正义，培养法律素养与实务能力。</p>
+      <p><strong>核心课程：</strong>宪法、民法、刑法、行政法、诉讼法、国际法、法律文书写作。</p>
+      <p><strong>就业方向：</strong>律师、法务、检察官、法官、公务员等。</p>
     </div>
 
-    <div id="bio" class="major">
-      <h2>生物科学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Biology_lab.jpg/640px-Biology_lab.jpg" class="major-img" alt="生物图示" />
-      <p><strong>简介：</strong>研究生命现象与生物规律，涵盖遗传、细胞、生态与生物技术等方向。</p>
-      <p><strong>核心课程：</strong>细胞生物学、遗传学、生物化学、分子生物学、生态学、微生物学。</p>
-      <p><strong>就业方向：</strong>科研机构、医药公司、生物技术、生物教育。</p>
+    <div id="ee" class="major">
+      <h2>电子信息工程</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/electronics.jpg" class="major-img" alt="电子图示" />
+      <p><strong>简介：</strong>学习电路设计、信号处理、通信与嵌入式系统，广泛应用于信息技术与制造业。</p>
+      <p><strong>核心课程：</strong>模拟电路、数字电路、通信原理、信号与系统、嵌入式开发。</p>
+      <p><strong>就业方向：</strong>电子工程师、嵌入式系统开发、通信工程、半导体行业。</p>
     </div>
 
-    <div id="geo" class="major">
-      <h2>地理信息科学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/GIS_example.jpg/640px-GIS_example.jpg" class="major-img" alt="GIS图示" />
-      <p><strong>简介：</strong>融合地理学与信息技术，研究地图制图、遥感、空间分析与定位导航。</p>
-      <p><strong>核心课程：</strong>GIS原理、遥感技术、地图制图、空间数据库、地理统计分析。</p>
-      <p><strong>就业方向：</strong>自然资源调查、城市规划、环境监测、导航系统开发。</p>
+    <div id="mech" class="major">
+      <h2>机械工程</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/mechanical_engineering.jpg" class="major-img" alt="机械图示" />
+      <p><strong>简介：</strong>涉及机械设计、制造、自动控制与机器人等方向，应用于工业各领域。</p>
+      <p><strong>核心课程：</strong>机械设计、材料力学、机械制造、工程制图、控制工程。</p>
+      <p><strong>就业方向：</strong>机械设计师、设备工程师、自动化工程、制造业研发。</p>
     </div>
 
     <div id="biz" class="major">
       <h2>工商管理</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Business_management_process.jpg/640px-Business_management_process.jpg" class="major-img" alt="管理图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/business_management.jpg" class="major-img" alt="管理图示" />
       <p><strong>简介：</strong>培养企业管理、市场分析、战略策划等能力，适应现代经济社会管理需求。</p>
       <p><strong>核心课程：</strong>管理学原理、市场营销、人力资源管理、财务管理、组织行为学。</p>
       <p><strong>就业方向：</strong>企业管理、市场营销、咨询顾问、项目经理、运营管理。</p>
@@ -237,23 +173,15 @@
 
     <div id="econ" class="major">
       <h2>经济学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/World_economy_graph_2010-2017.jpg/640px-World_economy_graph_2010-2017.jpg" class="major-img" alt="经济图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/economics.jpg" class="major-img" alt="经济图示" />
       <p><strong>简介：</strong>研究资源配置、市场机制与宏观经济政策，分析经济行为与发展趋势。</p>
       <p><strong>核心课程：</strong>微观经济学、宏观经济学、计量经济学、国际贸易、公共经济学。</p>
       <p><strong>就业方向：</strong>金融机构、政府部门、咨询公司、国际组织、研究机构。</p>
     </div>
 
-    <div id="law" class="major">
-      <h2>法学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Law_and_justice.jpg/640px-Law_and_justice.jpg" class="major-img" alt="法学图示" />
-      <p><strong>简介：</strong>研究法律制度、法治体系与社会正义，培养法律素养与实务能力。</p>
-      <p><strong>核心课程：</strong>宪法、民法、刑法、行政法、诉讼法、国际法、法律文书写作。</p>
-      <p><strong>就业方向：</strong>律师、法务、检察官、法官、公务员等。</p>
-    </div>
-
     <div id="psy" class="major">
       <h2>心理学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Psychology_and_brain_studies.jpg/640px-Psychology_and_brain_studies.jpg" class="major-img" alt="心理学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/psychology.jpg" class="major-img" alt="心理学图示" />
       <p><strong>简介：</strong>研究人类心理活动与行为规律，涵盖认知、发展、社会与临床心理学。</p>
       <p><strong>核心课程：</strong>普通心理学、发展心理学、社会心理学、心理测量、临床心理学。</p>
       <p><strong>就业方向：</strong>心理咨询、教育、市场调研、人力资源、医疗机构。</p>
@@ -261,7 +189,7 @@
 
     <div id="edu" class="major">
       <h2>教育学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Teaching_classroom.jpg/640px-Teaching_classroom.jpg" class="major-img" alt="教育学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/education.jpg" class="major-img" alt="教育学图示" />
       <p><strong>简介：</strong>研究教育理论与实践，培养教学、管理与教育研究能力。</p>
       <p><strong>核心课程：</strong>教育心理学、教育哲学、课程与教学论、教育管理、教育技术学。</p>
       <p><strong>就业方向：</strong>教师、教育管理、教育研究、培训机构。</p>
@@ -269,7 +197,7 @@
 
     <div id="news" class="major">
       <h2>新闻传播学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Newsroom.jpg/640px-Newsroom.jpg" class="major-img" alt="新闻图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/news.jpg" class="major-img" alt="新闻图示" />
       <p><strong>简介：</strong>涵盖新闻采编、媒介传播、公共关系与新媒体技术。</p>
       <p><strong>核心课程：</strong>新闻学原理、传播学、新闻采编、新媒体技术、公共关系。</p>
       <p><strong>就业方向：</strong>记者、编辑、媒体策划、公关、新媒体运营。</p>
@@ -277,7 +205,7 @@
 
     <div id="sociology" class="major">
       <h2>社会学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sociology_conference.jpg/640px-Sociology_conference.jpg" class="major-img" alt="社会学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/sociology.jpg" class="major-img" alt="社会学图示" />
       <p><strong>简介：</strong>研究社会结构、社会行为及社会问题，关注社会发展与治理。</p>
       <p><strong>核心课程：</strong>社会学导论、社会调查方法、社会心理学、人口学、城市与社区研究。</p>
       <p><strong>就业方向：</strong>社会研究、公共政策、社区管理、社会服务、市场调研。</p>
@@ -285,7 +213,7 @@
 
     <div id="hist" class="major">
       <h2>历史学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/History_books.jpg/640px-History_books.jpg" class="major-img" alt="历史学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/history.jpg" class="major-img" alt="历史学图示" />
       <p><strong>简介：</strong>研究人类社会历史发展，挖掘文化遗产与历史规律。</p>
       <p><strong>核心课程：</strong>中国史、世界史、考古学、历史文献学、文化遗产保护。</p>
       <p><strong>就业方向：</strong>文化保护、博物馆、档案管理、教育、新闻出版。</p>
@@ -293,7 +221,7 @@
 
     <div id="foreign" class="major">
       <h2>外国语言文学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Foreign_language_learning.jpg/640px-Foreign_language_learning.jpg" class="major-img" alt="外语图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/foreign_language.jpg" class="major-img" alt="外语图示" />
       <p><strong>简介：</strong>培养外语听说读写能力，了解语言文化与跨文化交流。</p>
       <p><strong>核心课程：</strong>外语基础、翻译理论、文学鉴赏、跨文化交际、语言学。</p>
       <p><strong>就业方向：</strong>翻译、外事、教育、国际贸易、旅游。</p>
@@ -301,7 +229,7 @@
 
     <div id="philo" class="major">
       <h2>哲学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Philosophy_books.jpg/640px-Philosophy_books.jpg" class="major-img" alt="哲学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/philosophy.jpg" class="major-img" alt="哲学图示" />
       <p><strong>简介：</strong>探讨人类存在、认识与价值，培养批判思维与逻辑分析能力。</p>
       <p><strong>核心课程：</strong>西方哲学史、中国哲学、逻辑学、伦理学、宗教学。</p>
       <p><strong>就业方向：</strong>教育、研究、文化产业、公共管理、媒体。</p>
@@ -309,31 +237,103 @@
 
     <div id="med" class="major">
       <h2>临床医学</h2>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Hospital_ICU.jpg/640px-Hospital_ICU.jpg" class="major-img" alt="医学图示" />
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/medicine.jpg" class="major-img" alt="医学图示" />
       <p><strong>简介：</strong>培养临床诊疗、医疗服务与健康管理能力，强调理论与实践结合。</p>
       <p><strong>核心课程：</strong>人体解剖学、生理学、病理学、内外科临床、医学影像学。</p>
       <p><strong>就业方向：</strong>医生、护士、医疗技术、公共卫生、医学研究。</p>
+    </div>
+
+    <div id="chem" class="major">
+      <h2>化学工程</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/chemistry.jpg" class="major-img" alt="化学图示" />
+      <p><strong>简介：</strong>研究化工原理、反应工程与材料科学，服务能源和制造产业。</p>
+      <p><strong>核心课程：</strong>化学反应工程、有机化学、无机化学、过程控制、材料科学。</p>
+      <p><strong>就业方向：</strong>化工设计、环境保护、制药、材料研发。</p>
+    </div>
+
+    <div id="env" class="major">
+      <h2>环境工程</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/environment.jpg" class="major-img" alt="环境图示" />
+      <p><strong>简介：</strong>致力于环境保护、污染控制与可持续发展技术的研究与应用。</p>
+      <p><strong>核心课程：</strong>水处理、大气污染控制、固废处理、环境监测与评估。</p>
+      <p><strong>就业方向：</strong>环境咨询、环保工程、政府监管、绿色能源。</p>
+    </div>
+
+    <div id="auto" class="major">
+      <h2>自动化</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/automation.jpg" class="major-img" alt="自动化图示" />
+      <p><strong>简介：</strong>研究自动控制系统、智能制造与机器人技术。</p>
+      <p><strong>核心课程：</strong>控制理论、自动控制系统、传感器技术、机器人学、嵌入式系统。</p>
+      <p><strong>就业方向：</strong>自动化工程师、机器人研发、智能制造、系统集成。</p>
+    </div>
+
+    <div id="arch" class="major">
+      <h2>建筑学</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/architecture.jpg" class="major-img" alt="建筑图示" />
+      <p><strong>简介：</strong>涵盖建筑设计、城市规划与绿色建筑技术。</p>
+      <p><strong>核心课程：</strong>建筑设计原理、结构力学、建筑历史与理论、施工技术。</p>
+      <p><strong>就业方向：</strong>建筑设计师、城市规划师、施工管理、房地产开发。</p>
+    </div>
+
+    <div id="elec" class="major">
+      <h2>电气工程及其自动化</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/electrical_engineering.jpg" class="major-img" alt="电气工程图示" />
+      <p><strong>简介：</strong>学习电力系统、自动控制及电气设备，服务能源与制造领域。</p>
+      <p><strong>核心课程：</strong>电路原理、电机学、自动控制原理、电力系统分析、电力电子技术。</p>
+      <p><strong>就业方向：</strong>电力系统设计与维护、自动化控制、智能电网研发、设备制造。</p>
+    </div>
+
+    <div id="bioeng" class="major">
+      <h2>生物工程</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/bioengineering.jpg" class="major-img" alt="生物工程图示" />
+      <p><strong>简介：</strong>融合生物学与工程技术，研究生物制药、基因工程与环境生物技术。</p>
+      <p><strong>核心课程：</strong>分子生物学、生物化学、基因工程、生物反应器、生物材料。</p>
+      <p><strong>就业方向：</strong>生物医药、环境保护、生物技术研发、农业技术。</p>
+    </div>
+
+    <div id="bio" class="major">
+      <h2>生物科学</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/biology.jpg" class="major-img" alt="生物科学图示" />
+      <p><strong>简介：</strong>研究生命现象及生物体结构与功能，探索生物多样性和生态系统。</p>
+      <p><strong>核心课程：</strong>细胞生物学、遗传学、生理学、生态学、进化生物学。</p>
+      <p><strong>就业方向：</strong>科研机构、环境保护、医药研发、教育。</p>
+    </div>
+
+    <div id="geo" class="major">
+      <h2>地理信息科学</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/geoinfo.jpg" class="major-img" alt="地理信息图示" />
+      <p><strong>简介：</strong>结合地理学与信息技术，研究空间数据采集与分析。</p>
+      <p><strong>核心课程：</strong>地理信息系统、遥感技术、空间分析、地图制图。</p>
+      <p><strong>就业方向：</strong>地图制作、环境规划、城市管理、GIS软件开发。</p>
+    </div>
+
+    <div id="phys" class="major">
+      <h2>物理学</h2>
+      <img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/physics.jpg" class="major-img" alt="物理学图示" />
+      <p><strong>简介：</strong>研究物质基本性质及运动规律，涵盖理论与实验物理。</p>
+      <p><strong>核心课程：</strong>力学、电磁学、热学、量子力学、固体物理。</p>
+      <p><strong>就业方向：</strong>科研、教育、电子技术、材料科学、工程技术。</p>
     </div>
   </div>
   <script>
     function showMajor(id) {
       document.querySelectorAll('.major').forEach(el => el.classList.remove('active'));
       document.getElementById(id).classList.add('active');
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function runBubbleSort() {
       let arr = [5, 3, 8, 2, 4];
-      let log = "";
+      let log = '';
       for (let i = 0; i < arr.length - 1; i++) {
         for (let j = 0; j < arr.length - 1 - i; j++) {
           if (arr[j] > arr[j + 1]) {
             [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
           }
         }
-        log += `第 ${i + 1} 轮: [${arr.join(", ")}]\n`;
+        log += `第 ${i + 1} 轮: [${arr.join(', ')}]\n`;
       }
-      document.getElementById("bubble-output").textContent = log;
+      document.getElementById('bubble-output').textContent = log;
     }
   </script>
 </body>
