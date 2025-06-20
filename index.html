@@ -19,6 +19,7 @@
       padding: 20px;
       box-sizing: border-box;
       flex-shrink: 0;
+      overflow-y: auto;
     }
     .sidebar h2 {
       margin-top: 0;
@@ -28,11 +29,15 @@
       padding: 0;
     }
     .sidebar li {
-      margin: 10px 0;
+      margin: 8px 0;
       cursor: pointer;
     }
     .sidebar li:hover {
       text-decoration: underline;
+    }
+    .sidebar li strong {
+      cursor: default;
+      color: #c8e6c9;
     }
     .content {
       flex: 1;
@@ -64,6 +69,8 @@
       }
       .sidebar {
         width: 100%;
+        max-height: 200px;
+        overflow-y: auto;
       }
     }
   </style>
@@ -72,35 +79,75 @@
   <div class="sidebar">
     <h2>专业列表</h2>
     <ul>
+      <li><strong>【工科】</strong></li>
       <li onclick="showMajor('cs')">计算机科学</li>
-      <li onclick="showMajor('math')">数学与应用数学</li>
-      <li onclick="showMajor('law')">法学</li>
       <li onclick="showMajor('ee')">电子信息工程</li>
-      <li onclick="showMajor('biz')">工商管理</li>
       <li onclick="showMajor('mech')">机械工程</li>
       <li onclick="showMajor('chem')">化学工程</li>
-      <li onclick="showMajor('bio')">生物科学</li>
       <li onclick="showMajor('env')">环境工程</li>
-      <li onclick="showMajor('psy')">心理学</li>
-      <li onclick="showMajor('econ')">经济学</li>
-      <li onclick="showMajor('edu')">教育学</li>
-      <li onclick="showMajor('hist')">历史学</li>
-      <li onclick="showMajor('med')">临床医学</li>
-      <li onclick="showMajor('arch')">建筑学</li>
       <li onclick="showMajor('auto')">自动化</li>
-      <li onclick="showMajor('news')">新闻传播学</li>
-      <li onclick="showMajor('foreign')">外国语言文学</li>
+      <li onclick="showMajor('arch')">建筑学</li>
+
+      <li><strong>【理科】</strong></li>
+      <li onclick="showMajor('math')">数学与应用数学</li>
+      <li onclick="showMajor('bio')">生物科学</li>
       <li onclick="showMajor('geo')">地理信息科学</li>
+
+      <li><strong>【商管】</strong></li>
+      <li onclick="showMajor('biz')">工商管理</li>
+      <li onclick="showMajor('econ')">经济学</li>
+
+      <li><strong>【社科】</strong></li>
+      <li onclick="showMajor('law')">法学</li>
+      <li onclick="showMajor('psy')">心理学</li>
+      <li onclick="showMajor('edu')">教育学</li>
+      <li onclick="showMajor('news')">新闻传播学</li>
+
+      <li><strong>【文科】</strong></li>
+      <li onclick="showMajor('hist')">历史学</li>
+      <li onclick="showMajor('foreign')">外国语言文学</li>
       <li onclick="showMajor('philo')">哲学</li>
+
+      <li><strong>【医学】</strong></li>
+      <li onclick="showMajor('med')">临床医学</li>
     </ul>
   </div>
-  <!-- 以下是专业介绍区域 -->
-  [原专业内容保留在这里，无需改动，已包含所有专业]
+  <div class="content">
+    <!-- 专业介绍区域保留不变，所有专业内容继续放在此处 -->
+    <div id="cs" class="major active">
+      <h2>计算机科学与技术</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Computer-science-and-engineering.jpg/640px-Computer-science-and-engineering.jpg" class="major-img" alt="计算机图示">
+      <p><strong>简介：</strong>本专业学习计算机原理、编程技术、软件工程与人工智能，旨在培养具备系统开发和技术创新能力的专业人才。</p>
+      <p><strong>核心课程：</strong>数据结构、操作系统、网络、数据库、算法设计、人工智能、前端与后端开发。</p>
+      <p><strong>就业方向：</strong>软件开发工程师、AI算法工程师、数据分析师、网络安全专家、产品经理等。</p>
+      <div class="demo-box">
+        <strong>🎮 小工具示例：</strong>
+        <p>你知道冒泡排序是怎么工作的吗？点击按钮，查看一次排序：</p>
+        <button onclick="runBubbleSort()">运行冒泡排序</button>
+        <pre id="bubble-output"></pre>
+      </div>
+    </div>
+    <!-- 其他专业内容省略，实际页面中继续添加 -->
+  </div>
   <script>
     function showMajor(id) {
       document.querySelectorAll('.major').forEach(el => el.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function runBubbleSort() {
+      let arr = [5, 3, 8, 2, 4];
+      let log = '';
+      for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - 1 - i; j++) {
+          if (arr[j] > arr[j + 1]) {
+            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+          }
+        }
+        log += `第 ${i + 1} 轮: [${arr.join(', ')}]\n`;
+      }
+      document.getElementById('bubble-output').textContent = log;
     }
   </script>
 </body>
